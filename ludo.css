@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+table{   
+    border-collapse: collapse; 
+    margin: auto;
+    position: absolute;
+    top: calc(50% - 378px);
+    left: calc(50% - 487px);
+    padding: 20px;
+}
+
+#board{
+    z-index: 1;
+}
+
+#bgTable{
+    z-index: 0;
+}
+
+#board td{
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    text-align: center;
+    border: 1px solid #0000;
+    /* color: #0000; */
+}
+#bgTable td{
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#bgTable [rowspan='7']{
+    min-width: 100px;
+    min-height: 100px;
+    border: none;
+}
+#bgTable [rowspan='8']{
+    min-width: 100px;
+    min-height: 100px;
+    border: none;
+}
+
+#board [rowspan='7']{
+    min-width: 100px;
+    min-height: 100px;
+}
+
+#board [rowspan='8']{
+    min-width: 100px;
+    min-height: 100px;
+}
+
+td[id^="diceContainerP"]>img{
+    width: 90px;
+}
+
+#bgTable .safe-zone{
+    background-image: url('images/star_green.png');
+    background-position: center;
+    background-size: 34px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+#bgTable [id^="bgEntryCellP"]{    
+    background-position: center;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+}
+
+#bgEntryCellP1{
+    background-image: url('images/arrow_green.png');
+    transform: rotate(-90deg);
+}
+#bgEntryCellP2{
+    background-image: url('images/arrow_red.png');
+}
+#bgEntryCellP3{
+    background-image: url('images/arrow_yellow.png');
+    transform: rotate(90deg);
+}
+#bgEntryCellP4{
+    background-image: url('images/arrow_blue.png');
+    transform: rotate(180deg);
+}
+
+#bgTable .ipc1{
+    box-shadow: 0 0 24px inset green;
+}
+#bgTable .ipc2{
+    box-shadow: 0 0 24px inset orangered;
+}
+#bgTable .ipc3{
+    box-shadow: 0 0 24px inset orange;
+}
+#bgTable .ipc4{
+    box-shadow: 0 0 24px inset blue;
+}
+
+#diceContainerP2,#diceContainerP3{
+    vertical-align: top;
+}
+#diceContainerP1,#diceContainerP4{
+    vertical-align: bottom;
+}
+
+#board td[id^='p1']{
+    box-shadow: 0 0 32px inset green;
+}
+#board td[id^='p2']{
+    box-shadow: 0 0 32px inset orangered;
+}
+#board td[id^='p3']{
+    box-shadow: 0 0 32px inset orange;
+}
+#board td[id^='p4']{
+    box-shadow: 0 0 32px inset blue;
+}
+
+.player-caption{
+    font-size: 20px;
+    margin:10px;
+    font-weight: 300;
+}
+
+.bg-center{
+    position: relative;
+    overflow: hidden;
+}
+
+.bgHomeP3{
+    position: absolute;
+    background: linear-gradient(to bottom left, rgba(255,165,0,1), rgba(255,165,0,0.2));
+    top: -55px;
+    left: 22px;
+    width: 108px;
+    height: 108px;
+    transform: rotate(-45deg);
+}
+.bgHomeP4{
+    position: absolute;
+    background: linear-gradient(to bottom left, rgba(0,0,255,1), rgba(0,0,255,0.2));
+    top: 22px;
+    left: 99px;
+    width: 108px;
+    height: 108px;
+    transform: rotate(45deg);
+}
+.bgHomeP1{
+    position: absolute;
+    background: linear-gradient(to bottom left, rgba(0,128,0,1), rgba(0,128,0,0.2));
+    top: 99px;
+    left: 22px;
+    width: 108px;
+    height: 108px;
+    transform: rotate(135deg);
+}
+.bgHomeP2{
+    position: absolute;
+    background: linear-gradient(to bottom left, rgba(255,69,0,1), rgba(255,69,0,0.2));
+    top: 22px;
+    left: -55px;
+    width: 108px;
+    height: 108px;
+    transform: rotate(-135deg);
+}
+
+.initial-cell-bg{
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+}
+
+[id^='diceP'].dice-disabled{
+    opacity: 0.5;
+}
+
+.token-placed-1{
+    /* background-image: using JS */
+    background-position : center;
+    background-repeat : no-repeat;
+    background-size : auto 32px;   
+    cursor : pointer; 
+}
+
+.token-placed-2{
+    background-position : 3px center,27px center;
+    background-repeat : no-repeat,no-repeat;
+    background-size : auto 32px,auto 32px;   
+    cursor : pointer; 
+}
+.token-placed-3{
+    background-position: 7px 3px,29px 3px, center 26px;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-size: auto 21px,auto 21px,auto 21px;
+    cursor: pointer;
+}
+.token-placed-4{
+    background-position: 7px 3px,29px 3px, 7px 26px,29px 26px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-size: auto 21px,auto 21px,auto 21px,auto 21px;
+    cursor: pointer;
+}
+.token-placed-5{
+    background-image: url(images/yellow_token.png), url(images/yellow_token.png),url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png);
+    background-position: 5px 8px,20px 8px,34px 8px,12px 28px,28px 28px;
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    cursor: pointer;
+}
+.token-placed-6{
+    background-image: url(images/yellow_token.png), url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png);
+    background-position: 5px 8px,20px 8px,34px 8px,5px 28px,20px 28px,34px 28px; 
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    cursor: pointer;
+}
+.token-placed-7{
+    background-image: url(images/yellow_token.png), url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png);
+    background-position: 5px 2px,20px 2px,34px 2px,5px 18px,20px 18px,34px 18px,center 34px; 
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    cursor: pointer;
+}
+.token-placed-8{
+    background-image: url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png);
+    background-position: 5px 2px,20px 2px,34px 2px,5px 18px,20px 18px,34px 18px,12px 34px,28px 34px; 
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    cursor: pointer;
+}
+.token-placed-9{
+    background-image: url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png),url(images/yellow_token.png), url(images/yellow_token.png), url(images/yellow_token.png);
+    background-position: 5px 2px,20px 2px,34px 2px,5px 18px,20px 18px,34px 18px,5px 34px,20px 34px,34px 34px; 
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    cursor: pointer;
+}
+/* we can create class to place upto 16 tokens */
+
+.token-dislocated{
+    background-image:none !important;
+    cursor: default;
+}
+
+.token-in-home{
+    height: 26px;
+    width: auto;
+    position: absolute;
+    transform: rotate(-135deg);
+    display: none;
+}
+
+.token-in-home-1{ 
+    bottom: 6px;
+    left: 10px;
+}
+.token-in-home-2{ 
+    bottom: 10px;
+    left: 52px;
+}
+.token-in-home-3{ 
+    bottom: 29px;
+    left: 33px;
+}
+.token-in-home-4{ 
+
+    bottom: 48px;
+    left: 14px;
+}
+
+.bg-active-player-1{
+    box-shadow: 0 0 56px 12px inset green;
+    transition-duration: 400ms;
+}
+.bg-active-player-2{
+    box-shadow: 0 0 56px 12px inset orangered;
+    transition-duration: 400ms;
+}
+.bg-active-player-3{
+    box-shadow: 0 0 56px 12px inset orange;
+    transition-duration: 400ms;
+}
+.bg-active-player-4{
+    box-shadow: 0 0 56px 12px inset blue;
+    transition-duration: 400ms;
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="ludo.css">
+</head>
+<body>
+    <table id='board'>
+        <tr>
+            <td id="diceContainerP2" rowspan="7">
+                <img id="diceP2" src="images/dice_1.png">
+                <div class="player-caption">Player 2</div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="0" class="token-placed-16"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="diceContainerP3" rowspan="7">
+                <img id="diceP3" src="images/dice_1.png">
+                <div class="player-caption">Player 3</div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="p21" colspan="2" rowspan="2"></td>
+            <td id="p22" colspan="2" rowspan="2"></td>
+            <td></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+            <td></td>
+            <td id="p31" colspan="2" rowspan="2"></td>
+            <td id="p32" colspan="2" rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="p23" colspan="2" rowspan="2"></td>
+            <td id="p24" colspan="2" rowspan="2"></td>
+            <td></td>
+            <td id="9"></td>
+            <td id="10"></td>
+            <td id="11"></td>
+            <td></td>
+            <td id="p33" colspan="2" rowspan="2"></td>
+            <td id="p34" colspan="2" rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="12"></td>
+            <td id="13"></td>
+            <td id="14"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="15"></td>
+            <td id="16"></td>
+            <td id="17"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="18"></td>
+            <td id="19"></td>
+            <td id="20"></td>
+            <td id="21"></td>
+            <td id="22"></td>
+            <td id="23"></td>
+            <td colspan="3" rowspan="3"></td>
+            <td id="24"></td>
+            <td id="25"></td>
+            <td id="26"></td>
+            <td id="27"></td>
+            <td id="28"></td>
+            <td id="29"></td>
+        </tr>
+        <tr>
+            <td id="diceContainerP1" rowspan="8">
+                <div class="player-caption">Player 1</div>
+                <img id="diceP1" src="images/dice_1.png">
+            </td>
+            <td id="30"></td>
+            <td id="31"></td>
+            <td id="32"></td>
+            <td id="33"></td>
+            <td id="34"></td>
+            <td id="35"></td>
+            <td id="36"></td>
+            <td id="37"></td>
+            <td id="38"></td>
+            <td id="39"></td>
+            <td id="40"></td>
+            <td id="41"></td>
+            <td id="diceContainerP4" rowspan="8">
+                <div class="player-caption">Player 4</div>
+                <img id="diceP4" src="images/dice_1.png">
+            </td>
+        </tr>
+        <tr>
+            <td id="42"></td>
+            <td id="43"></td>
+            <td id="44"></td>
+            <td id="45"></td>
+            <td id="46"></td>
+            <td id="47"></td>
+            <td id="48"></td>
+            <td id="49"></td>
+            <td id="50"></td>
+            <td id="51"></td>
+            <td id="52"></td>
+            <td id="53"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="54"></td>
+            <td id="55"></td>
+            <td id="56"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="p11" colspan="2" rowspan="2"></td>
+            <td id="p12" colspan="2" rowspan="2"></td>
+            <td></td>
+            <td id="57"></td>
+            <td id="58"></td>
+            <td id="59"></td>
+            <td></td>
+            <td id="p41" colspan="2" rowspan="2"></td>
+            <td id="p42" colspan="2" rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="60"></td>
+            <td id="61"></td>
+            <td id="62"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="p13" colspan="2" rowspan="2"></td>
+            <td id="p14" colspan="2" rowspan="2"></td>
+            <td></td>
+            <td id="63"></td>
+            <td id="64"></td>
+            <td id="65"></td>
+            <td></td>
+            <td id="p43" colspan="2" rowspan="2"></td>
+            <td id="p44" colspan="2" rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="66"></td>
+            <td id="67"></td>
+            <td id="68"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="69"></td>
+            <td id="70"></td>
+            <td id="71"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table id="bgTable">
+        <tr>
+            <td rowspan="7"></td>
+            <td colspan="6" rowspan="6" id="bg-player-2"></td>            
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="6" rowspan="6" id="bg-player-3"></td>
+            <td rowspan="7"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="ipc3"></td>
+            <td id="bgEntryCellP3"></td>            
+        </tr>
+        <tr>
+            <td class="safe-zone"></td>
+            <td class="ipc3"></td>
+            <td></td>            
+        </tr>
+        <tr>           
+            <td></td>
+            <td class="ipc3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="ipc3"></td>
+            <td></td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td class="ipc3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="bgEntryCellP2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3" rowspan="3" class="bg-center">
+                <div class="bgHomeP1">
+                    <img class="token-in-home token-in-home-1" src="images/green_token.png">
+                    <img class="token-in-home token-in-home-2" src="images/green_token.png">
+                    <img class="token-in-home token-in-home-3" src="images/green_token.png">
+                    <img class="token-in-home token-in-home-4" src="images/green_token.png">
+                </div>
+                <div class="bgHomeP2">
+                    <img class="token-in-home token-in-home-1" src="images/red_token.png">
+                    <img class="token-in-home token-in-home-2" src="images/red_token.png">
+                    <img class="token-in-home token-in-home-3" src="images/red_token.png">
+                    <img class="token-in-home token-in-home-4" src="images/red_token.png">
+                </div>
+                <div class="bgHomeP3">
+                    <img class="token-in-home token-in-home-1" src="images/yellow_token.png">
+                    <img class="token-in-home token-in-home-2" src="images/yellow_token.png">
+                    <img class="token-in-home token-in-home-3" src="images/yellow_token.png">
+                    <img class="token-in-home token-in-home-4" src="images/yellow_token.png">
+                </div>
+                <div class="bgHomeP4">
+                    <img class="token-in-home token-in-home-1" src="images/blue_token.png">
+                    <img class="token-in-home token-in-home-2" src="images/blue_token.png">
+                    <img class="token-in-home token-in-home-3" src="images/blue_token.png">
+                    <img class="token-in-home token-in-home-4" src="images/blue_token.png">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="safe-zone"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="8"></td>     
+            <td></td>
+            <td class="ipc2"></td>
+            <td class="ipc2"></td>
+            <td class="ipc2"></td>
+            <td class="ipc2"></td>
+            <td class="ipc2"></td>
+            <td class="ipc4"></td>
+            <td class="ipc4"></td>
+            <td class="ipc4"></td>
+            <td class="ipc4"></td>
+            <td class="ipc4"></td>
+            <td></td>
+            <td rowspan="8"></td>
+        </tr>
+        <tr>            
+            <td></td>
+            <td></td>
+            <td class="safe-zone"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="bgEntryCellP4"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="6" rowspan="6" id="bg-player-1"></td>            
+            <td></td>
+            <td class="ipc1"></td>
+            <td></td>
+            <td colspan="6" rowspan="6" id="bg-player-4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="ipc1"></td>
+            <td></td>            
+        </tr>
+        <tr>
+            <td></td>
+            <td class="ipc1"></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+           
+            <td></td>
+            <td class="ipc1"></td>
+            <td class="safe-zone"></td>
+        </tr>
+        <tr>
+            <td id="bgEntryCellP1"></td>
+            <td class="ipc1"></td>
+            <td></td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script src="ludo.js"></script>
+</body>
+</html>
