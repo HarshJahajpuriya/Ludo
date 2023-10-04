@@ -1,0 +1,22 @@
+{
+  "name": "ludo",
+  "homepage": "https://github.com/HarshJahajpuriya/Ludo",
+  "version": "1.0.0",
+  "description": "Simple HTML page leveraging JS and CSS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshJahajpuriya/Ludo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarshJahajpuriya/Ludo/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
